@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tableau</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<table>
+		<caption>Passagers du vol 377</caption>
+
+		<tr>
+			<th>Nom</th>
+			<th>Age</th>
+			<th>Pays</th>
+		</tr>
+		<tr>
+			<td>Carmen</td>
+			<td>33 ans</td>
+			<td>Espagne</td>
+		</tr>
+		<tr>
+			<td>Michelle</td>
+			<td>26 ans</td>
+			<td>USA</td>
+		</tr>
+	</table>
+
+	<!-- colspan et rowspan  pour fusionner les cellules. Cela s'applique au <td> et il suffit de ne pas écrire de <td> à l'autre <tr> pour la cellule que l'on veut en moins !-->
+
+	<form method="post" action="traitement.php">
+		<p>
+			<label for="pseudo">Votre pseudo : </label><input type="text" name="pseudo" id="pseudo" placeholder="Ex : Zozor" size="30" maxlength="10">
+			<br>
+
+			<label for="pass">Votre mot de passe :</label>
+			<input type="password" name="pass" id="pass" placeholder="EJDkds65" size="25" maxlength="15"><br>
+
+			<label for="ameliorer">Comment pensez-vous que je pourrais améliorer mon site ?</label><br>
+			<textarea name="ameliorer" id="ameliorer"></textarea>
+
+		</p>
+	</form>
+
+	<form method="post" action="traitement.php">
+		<p>
+			
+		</p>
+	</form>
+
+	<form method="post" action="traitement.php">
+		<p>
+			<label for="pseudo">Votre pseudo</label> :
+			<input type="text" name="pseudo" id="pseudo">
+		</p>
+	</form>
+
+	<form>
+		<p>
+			<label for="ameliorer">Comment pensez-vous que je pourrais améliorer mon site ?</label><br>
+			<textarea name="ameliorer" id="ameliorer"></textarea>
+		</p>
+	</form>
+
+	<input type="email" name="mail">
+	<input type="url" name="url">
+	<input type="tel" name="tel">
+	<input type="number" name="number">
+	<input type="range" name="curseur">
+	<input type="color" name="color">
+	<input type="date" name="date">
+	<input type="search" name="search">
+
+	<input type="checkbox" name="choix">
+
+	<form>
+		<p>
+			Cocher les aliments que vous aimez manger : <br>
+			<input type="checkbox" name="frites" id="frites"><label for="frites">Frites</label><br>
+			<input type="checkbox" name="steak" id="steak"><label for="steak">Steak</label><br>
+			<input type="checkbox" name="huitres" id="huitres"><label for="huitre">Huîtres</label><br>
+			<input type="checkbox" name="epinards" id="epinards"><label for="epinards">Epinards</label><br>
+		</p>
+	</form>
+
+	<!--On veut ne pouvoir sélectionner qu'une seule option c'est pourquoi on lie entre elles plusieurs options qui forment un groupe!-->
+
+	<form method="post" action="traitement.php">
+		<p>
+			Veuillez indiquer la tranche d'âge à laquelle vous vous situez :<br>
+			<input type="radio" name="age" value="moins15" id="moins15"><label for="moins15">Moins de 15 ans</label><br>
+			<input type="radio" name="age" value="medium18-25" id="medium18-25"><label for="medium18-25">18-25 ans</label><br>
+			<input type="radio" name="age" value="medium25-4O" id="medium25-4O"><label for="medium25-4O">25-40 ans</label><br>
+			<input type="radio" name="age" value="plus40" id="plus40"><label for="plus40">Plus de 40 ans</label><br>
+		</p>
+	</form>
+
+	<form>
+		<p>
+			<label for="pays">Dans quel pays habitez-vous ?</label><br>
+			<select name="pays" id="pays">
+				<optgroup label="Europe">
+					<option value="france">France</option>
+					<option value="espagne">Espagne</option>
+	           		<option value="italie">Italie</option>
+	           		<option value="royaume-uni">Royaume-Uni</option>
+	           	</optgroup>
+	           	<optgroup label="Amérique">
+	           		<option value="canada">Canada</option>
+	           		<option value="etats-unis">États-Unis</option>
+	           	</optgroup>
+	           	<optgroup label="Asie">
+	           		<option value="chine">Chine</option>
+	           		<option value="japon">Japon</option>
+	            </optgroup>
+			</select>
+		</p>
+	</form>
+
+	<!--Regrouper les champs de sélections (les inputs et équivalents)!-->
+
+	<form method="post" action="traitement.php">
+ 
+   <fieldset>
+       <legend>Vos coordonnées</legend> <!-- Titre du fieldset --> 
+
+       <label for="nom">Quel est votre nom ?</label>
+       <input type="text" name="nom" id="nom" />
+
+       <label for="prenom">Quel est votre prénom ?</label>
+       <input type="text" name="prenom" id="prenom" />
+ 
+       <label for="email">Quel est votre e-mail ?</label>
+       <input type="email" name="email" id="email" />
+
+   </fieldset>
+ 
+   <fieldset>
+       <legend>Votre souhait</legend> <!-- Titre du fieldset -->
+ 
+       <p>
+           Faites un souhait que vous voudriez voir exaucé :
+
+           <input type="radio" name="souhait" value="riche" id="riche" /> <label for="riche">Etre riche</label>
+           <input type="radio" name="souhait" value="celebre" id="celebre" /> <label for="celebre">Etre célèbre</label>
+           <input type="radio" name="souhait" value="intelligent" id="intelligent" /> <label for="intelligent">Etre <strong>encore</strong> plus intelligent</label>
+           <input type="radio" name="souhait" value="autre" id="autre" /> <label for="autre">Autre...</label>
+       </p>
+ 
+       <p>
+           <label for="precisions">Si "Autre", veuillez préciser :</label>
+           <textarea name="precisions" id="precisions" cols="40" rows="4"></textarea>
+       </p>
+   </fieldset>
+
+</form>
+
+<form method="post" action="traitement.php">
+	<p>
+		Qu'aimez vous le plus mangez :<br>
+		<input type="radio" name="aliment" value="carotte" id="carotte"><label for="Carotte">Les carottes ?</label><br>
+		<input type="radio" name="aliment" value="pasteque" id="pasteque"><label for="pasteque">Les pastèques ?</label><br>
+		<input type="submit" name="Envoyer">
+	</p>
+</form>
+
+@media screen and (max-width: 1280px){
+	
+}
+
+
+</body>
+</html>

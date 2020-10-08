@@ -1,0 +1,71 @@
+
+
+div{
+	width: 90%;
+	height: 1200px;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 0px;
+}
+
+p{
+	text-align: justify;
+	border: 1px solid black;
+	width: 80%;
+}
+
+img{
+	width: 60%;
+}
+
+
+#bloc_1{
+	flex: 0 0 40%;
+	height: 50%;
+}
+
+
+
+#bloc_1 p{
+	
+}
+
+#bloc_2{
+	flex: 0 0 20%;
+	height: 50%;
+}
+
+
+#bloc_3{
+	flex: 0 0 20%;
+	height: 50%;
+}
+
+
+
+
+/*
+#bloc_4{
+	flex: 0 0 30%;
+	width: 30%;
+}
+
+#bloc_5{
+	flex: 0 0 30%;
+	width: 30%;
+}
+
+#bloc_6{
+	flex: 0 0 30%;
+	width: 30%;
+}
+
+une solution est de donné ue valeur fixe en pixel à l'image et au paragraphe du bloc_1
+afin de les rendre égaux à ceux des 2 autres blocs.
+
+
+
+
+
